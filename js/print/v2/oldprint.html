@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="javascript" src="lodop.js"></script>
+<object id="LODOP" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
+<embed id="LODOP_EM" type="application/x-print-lodop" width="0" height="0" pluginspage="/upfile/install_lodop.exe"></embed>
+</object> 
+<style type="text/css" media="print"> 
+#print_bg { display: none; }
+#printContainer { display: none; }
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<link href="images/print/print.css" rel="stylesheet" type="text/css">
+<title>订单打印</title>
+</head>
+<body>
+
+<input type="hidden" name="ordersid" id="ordersid" value="MTAwMDYx" >
+
+<span id="form1">
+
+<!-- 订单流水 -->
+<div id="jobsnums"></div>
+<!-- 订购时间 -->
+<div id="ordertime">2010-12-28</div>
+<!-- 客户姓名 -->
+<div id="name">刘燕</div> 
+<!-- 客户用户名 -->
+<div id="username">darqiu</div>
+<!-- 客户编号 -->
+<div id="customsid">100059</div>
+<!-- 订单编号 -->
+<div id="ordersid">100061</div>
+<!-- 会员卡号 -->
+<div id="vipcard">10000</div>
+<!-- 客户地址 -->
+<div id="address">上海市 闵行区 七莘路999弄2-503<br>联系电话：15900000000&nbsp;&nbsp;&nbsp;&nbsp;021-96666266</div>
+<!-- 购买店面 -->
+<div id="shop">京东商城</div>
+<!-- 合同编号 -->
+<div id="contract">34303558</div>
+
+<!-- 订购信息 -->
+<div id="contents">
+美国爱惠浦美国爱惠浦美国爱惠浦美国爱惠浦美国爱惠浦美国爱惠浦美国爱惠浦美国爱惠浦美国爱惠浦美浦美国爱惠浦美国爱惠浦惠浦<br>
+编号：101005&nbsp;&nbsp;名称：美国爱惠浦Everpure净水机QL2-4K型<br>
+会员价：￥0元&nbsp;&nbsp;&nbsp;&nbsp;数量：1 件&nbsp;&nbsp;&nbsp;&nbsp;小计：￥0元<br>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+编号：101005&nbsp;&nbsp;名称：美国爱惠浦Everpure净水机QL2-4K型<br>
+会员价：￥0元&nbsp;&nbsp;&nbsp;&nbsp;数量：1 件&nbsp;&nbsp;&nbsp;&nbsp;小计：￥0元<br>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+编号：101005&nbsp;&nbsp;名称：美国爱惠浦Everpure净水机QL2-4K型<br>
+会员价：￥0元&nbsp;&nbsp;&nbsp;&nbsp;数量：1 件&nbsp;&nbsp;&nbsp;&nbsp;小计：￥0元<br>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+编号：101005&nbsp;&nbsp;名称：美国爱惠浦Everpure净水机QL2-4K型<br>
+会员价：￥0元&nbsp;&nbsp;&nbsp;&nbsp;数量：1 件&nbsp;&nbsp;&nbsp;&nbsp;小计：￥0元<br>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+编号：101005&nbsp;&nbsp;名称：美国爱惠浦Everpure净水机QL2-4K型<br>
+会员价：￥0元&nbsp;&nbsp;&nbsp;&nbsp;数量：1 件&nbsp;&nbsp;&nbsp;&nbsp;小计：￥0元<br>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+商品总价：￥0元&nbsp;&nbsp;&nbsp;&nbsp;付款方式：网上支付&nbsp;&nbsp;&nbsp;&nbsp;付款状态：已付款<br>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
+所在城市：上海 上海市 闵行区&nbsp;&nbsp;&nbsp;&nbsp;送货方式：送货上门&nbsp;&nbsp;&nbsp;&nbsp;安装方式：其它&nbsp;&nbsp;&nbsp;&nbsp;销售人员：亿家销售员(0)<br>
+计划送货时间：2010-12-29&nbsp;&nbsp;&nbsp;&nbsp;计划安装时间：2010-12-29</div>
+
+<!-- 其它费用 -->
+<div id="otherPrice">￥0</div>
+<!-- 优惠费用 -->
+<div id="minusPrice">￥0</div>
+<!-- 实际金额 -->
+<div id="endPrice">￥0</div>
+<!-- 已付金额 -->
+<div id="sendPrice">￥0</div>
+<!-- 应付金额 -->
+<div id="payPrice">￥0</div>
+
+<!-- 审 核 人 -->
+<div id="checkname">周速华(5003)</div>
+<!-- 打印人时间 -->
+<div id="printinfo">订单打印人：邱勇&nbsp;&nbsp;&nbsp;&nbsp;打印时间：2013-03-05 17:24:02</div>
+
+<!-- 费用备注 -->
+<div id="priceDetail"></div>
+
+<!-- 销售店面 -->
+<div id="shopinfo">京东商城&nbsp;&nbsp;京东商城店(10018)&nbsp;&nbsp;电话：95105575</div>
+<!-- 售后联系 -->
+<div id="serviceinfo">上海售后服务中心&nbsp;&nbsp;上海市闵行区虹梅南路3609号4号楼2层(12002)&nbsp;&nbsp;电话：4001555151</div>
+
+</span>
+
+<script language="javascript" type="text/javascript"> 
+	var LODOP; //声明为全局变量
+	function printView(){
+
+
+		var topnums		= '-16';
+		var leftnums	= '-4';
+		var topnums		= topnums-0;
+		var leftnums	= leftnums-0;
+		var print_left	= $("#print_leftMargin").val();
+		//alert(print_left);return;
+		var print_top   = $("#print_topMargin").val();
+		var print_left	= print_left-0;
+		var print_top 	= print_top-0;
+		var print_ok_top = topnums+print_top;
+		var print_ok_left = leftnums+print_left;
+		//alert(print_ok_left);
+		
+		//var id = $("#ordersid").val();
+		//$.get("/orders/prints?do=logs&id="+id,null,function callback(data){ 
+			LODOP = getLodop(document.getElementById('LODOP'),document.getElementById('LODOP_EM'));
+			var strBodyStyle="<link href='images/print/print.css' rel='stylesheet' type='text/css'>";
+			var strFormHtml= strBodyStyle + "<body>"+document.getElementById("form1").innerHTML+"</body>";
+			//LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_样式风格");	
+			//LODOP.ADD_PRINT_TEXT(50,50,260,39,"打印与显示样式一致：");
+			LODOP.ADD_PRINT_HTM(print_ok_top,print_ok_left,816,1119,strFormHtml);//816
+			LODOP.PREVIEW();
+		//});
+		//printclose();
+	}
+
+
+	function printLog()
+	{
+		var id = $("#ordersid").val();
+		$.ajax({  
+		    type: "GET",  
+			async: false,
+		    url: S_ROOT+"orders/prints?do=msglogs&id="+id,
+		    data: "",             
+		    success: function(rows){ 
+		    	art.dialog({
+		    		id: 'orders_print',
+		    		//esc: false,
+		    		lock: true,
+		    		//fixed: true,
+		    		title: '订单打印确认',
+		    	    content: rows,
+		    	    padding: '10px 10px'
+		    	})
+		    }
+		});
+	}
+
+	function printclose()
+	{
+		var dialog = art.dialog({id:'orders_print'});
+		dialog.close();
+	}
+
+	function savePrint()
+	{
+		var print_left	= $("#print_leftMargin").val();
+		var print_top   = $("#print_topMargin").val();
+		$.ajax({  
+		    type: "POST",  
+			async: false,
+		    url: S_ROOT+"orders/prints?do=saveprint",
+		    data: "printleft="+print_left+"&printtop="+print_top,             
+		    success: function(rows){
+		    	if(rows=="1"){
+		    		var msg = "打印机配置操作成功！";
+		    	}else{
+		    		var msg = rows;
+		    	}
+		    	msgshow(msg);
+		    }
+		});
+	}
+
+	function defaultPrint()
+	{
+		$("#print_leftMargin").attr("value","0");
+		$("#print_topMargin").attr("value","0");
+		savePrint();
+	}
+	
+</script>
+<div id="print_bg"><img src="images/print/print2013.jpg"></div>
+<div id="printContainer"> 
+  <p>
+  <input type="button" value="返回订单" onClick="location.href='/orders/views?id=MTAwMDYx'" style="width:120px;" class="btnorange">
+  </p>
+  <p>
+  <input type="button" value="打印服务单" class="button" style="width:120px;" onclick="printView();"><!-- printView();printLog(); -->
+  </p>
+  <form method="post" name="form_print" id="form_print" action=""> 
+  <p>
+	左边距
+  </p>
+  <p> <input name="print_leftMargin" type="text" id="print_leftMargin" value="0" style="width:110px;">
+  </p>
+  <p>
+	上边距
+  </p>
+  <p> <input name="print_topMargin" type="text" id="print_topMargin" value="0" style="width:110px;"> 
+  </p> 
+  <p> 
+    <input type="button" onclick="savePrint()" value="保存设置" class="btnblue" style="width:120px;"> 
+  </p> 
+  <p> 
+    <input type="button" onclick="defaultPrint()" value="默认设置" class="btnwhite" style="width:120px;"> 
+  </p> 
+  </form>
+  <p><img src="images/print/oki5530.png" width="120"></p> 
+  <p>【注意事项】</p> 
+  <p>1、打印模块仅兼容IE浏览器。初次使用时，请根据提示，允许启用一个ActiveX控件。</p> 
+  <p>2、如没有提示下载控件，(32位系统<a href="/upfile/install_lodop.exe" class="ured">请点击这里下载</a>)</p> 
+  <p>(64位系统，<a href="/upfile/install_lodop.exe" class="ured">请点击这里下载</a>）</p> 
+  <p>3、请调整页边距到合适大小然后保存，今后就会使用该固定值。</p> 
+  <p><img src="images/print/margin.png" width="120"></p> 
+</div> 
+</body>
+</html>

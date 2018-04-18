@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*css document*/
+html,body,div,h1,h2,h3,h4,h5,h6,ul,dl,p,img{border: 0; margin: 0; padding: 0;}
+body{font:normal normal 12px/22px Tahoma, Verdana, "微软雅黑"; color:#444;}
+dl,ul,ol,li{list-style: none;}
+a,input,select,textarea{ text-decoration: none;outline: none; color: #444; blur:expression(this.onFocus=this.blur());}
+a img{outline: none; border-style: none; border-width: 0;}
+.clear{clear:both;zoom:1}
+.clear:after{clear:both; content: "";display:block; height: 0; visibility:hidden;}
+.w1200,.header,.footer,.container{ width: 1200px; margin: 0 auto;}
+.fl{float: left;}
+.fr{float: right;}
+.container{width: 100%; margin-top: 10px;}
+.blockname{line-height: 40px; width: 98%; margin: 0 auto; font-weight: bold; font-size: 18px;}
+.catbox{width: 40%; float: left;}
+.catbox .catlist{border:solid 1px #D5D5D5; border-top: 0px; width: 98%;  margin: 0 auto; }
+.catbox .catlist li{border-top:solid 1px #D5D5D5;}
+.catbox .catlist li:hover{background-color: #E2F4FF;}
+.catbox .catlist li .catbig{width: 30%; float: left; text-indent: 1em; line-height: 28px;}
+.catbox .catlist li .catsml {width: 69%;float: right; border-left:solid 1px #D5D5D5;}
+.catbox .catlist li .catsml p{ padding:2px 10px;}
+.catbox .catlist li .catsml p a{color: #0077C3; text-decoration: underline;}
+
+.tabbox{width: 60%;float:right;}
+.tabbox .tabwrap{width: 98%; height: 540px;position: relative;margin: 0 auto; padding-top:36px;}
+.tabbox .tabwrap .tabmen{position: absolute; top: 0px; left: 0px; width: 100%;height:36px; }
+.tabbox .tabwrap .tabmen li{width: 14%; float: left; text-align: center; line-height: 36px;  height: 36px; position: relative;}
+.tabbox .tabwrap .tabmen li a{width: 96%; border:solid 1px #D5D5D5; border-bottom: 0px; height: 35px; display: block; background-color: #E2F4FF; font-size: 14px;}
+.tabbox .tabwrap .tabmen li a.current{background-color: #FFF; height: 35px;position: absolute;bottom: -1px;}
+
+.tabbox .tabwrap .tabcon{border:solid 1px #D5D5D5;  }
+.tabbox .tabwrap .tabcon .list{padding: 10px;}
+.tabbox .tabwrap .tabcon .list li{ line-height:22px; font-size: 14px; border-bottom:  solid 1px #D8D8D8; padding:6px 10px; }
+.tabbox .tabwrap .tabcon .list li a{display: block; }
+.tabbox .tabwrap .tabcon .list li:hover{background-color: #E2F4FF;}
+.tabbox .tabwrap .tabcon .list li.current,.tabbox .tabwrap .tabcon .list li a.current{color: #999;}
+
+.pagebox{margin-top: 10px;}
+.pagebox ul{height: 25px; width: 90%; margin: 0 auto;}
+.pagebox ul li{float: left; width: auto; }
+.pagebox ul li a,span{display: block;border: solid 1px #D5D5D5;padding:2px 10px; background-color: #F3F3F3}
+.pagebox ul li a:hover{border:solid 1px #016BBF; background-color: #fff;}
+.pagebox ul li.gap a{cursor: default;}
+.pagebox ul li.active a{cursor: default; color: #016BBF; border:solid 1px #016BBF;background-color: #fff;}
+

@@ -1,0 +1,73 @@
+*{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.nav-top{
+  width: 1280px;
+  height: 130px;
+  background: red;
+}
+.nav-bottom{
+  width: 1280px;
+  height: 20px;
+  background: orange;
+}
+.nav-list ul{
+  text-align: center;
+}
+.nav-list li{
+  float: left;
+  margin-left: 20px;
+
+
+}
+.nav-list li:hover{
+  background: red;
+  border-radius: 10px;
+  display: inline-block;
+}
+.mainbox{
+  width: 1280px;
+  height: 900px;
+  border: 1px solid black;
+  position: relative;
+}
+.btn{
+  width: 40px;
+  height: 20px;
+  background: yellow;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 4;
+}
+.laybox{
+  width: 350px;
+  height: 300px;
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -175px;
+  margin-top: -150px;
+  background: red;
+  z-index: 10;
+  display: none;
+}
+.hidebox{
+  width: 1280px;
+  height: 800px;
+  opacity: 0.5;
+  background: black;
+  z-index: 5;
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}

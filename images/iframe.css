@@ -1,0 +1,35 @@
+*{font-size:14px;}
+body{font-family:helvetica,tahoma,verdana,sans-serif;padding:0px;font-size:14px;margin:0;}
+div,p,h1,h2,h3,ul,li,dl,dd{padding: 0px; margin: 0px;}
+
+.clear{clear:both;zoom:1}
+.clear:after{clear:both; content: "";display:block; height: 0; visibility:hidden;}
+.fr{float: left; width:20%; font-size:14px; }
+.fl{float: left; width:80%; text-align:right; }
+
+/* 默认链接 * 根据页面默认链接颜色进行更改 * */
+a:link,a:visited,a:active {color:#084978; text-decoration:none;}
+a:hover {color:#007ebb; text-decoration:underline;}
+
+dl,li,dt,dd{ list-style:none;}
+
+
+.header{ height:35px; position:absolute;left:0px;top:0px;width:100%;z-index:12; }
+.header .logo { text-align:center; }
+.header .logo img { margin:8px 0px 0px 0px; }
+.header .logo span{ left:130px; top:0px; z-index:100; position:absolute; }
+.header .drop { float:left;position:absolute;top:0px;height:35px;z-index:12;}
+.header .drop ul{}
+.header .drop li{float:left;cursor:pointer;position:relative;line-height:35px;z-index:12; border-right:solid 1px #FFF;}
+.header .drop li:first-child{border-left:0px;}
+.header .drop li a{ display:block; color:#FFF; text-align:center; min-width:100px; }
+.header .drop li:hover dl{display:block;}
+.header .drop li dl{display:none;position:absolute;left:0px;top:35px;width:100%;z-index:10;border:solid 1px #D5D5D5;}
+.header .drop li dl dd {line-height:35px;color:#FFF;border-top:solid 1px #D5D5D5; color:#444;}
+.header .drop li dl dd:first-child{border-top:0px;}
+.header .drop li dl dd a{color:#444;}
+.header .drop li dl dd a:hover{background-color:#D9EBF7;}
+
+.bgheader	{ background-color:#4679af; color:#333; }
+.bgcolor  { background-color:#f1f9ff; color:#ccc; }
+.bgwhite  { background-color:#FFFFFF; color:#CCC; }
