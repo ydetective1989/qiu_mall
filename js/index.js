@@ -22,7 +22,7 @@ function upfile(){
     contentType: false,
     success:function(da){
       alert(da);
-        nav.style.backgroundImage = "url(" + da + ")";
+        nav.innerHTML = "<img src='"+ da + "'>" ;
         // nav.innerHTML = data;
         laybox.style.display = "none";
         hidebox.style.display = "none";
