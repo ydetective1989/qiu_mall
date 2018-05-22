@@ -53,13 +53,45 @@
       cursor: pointer;
     }
 
+    .test1{
+      width: 100%;
+      border: 1px solid black;
+    }
+    .test{
+      width: 50px;
+      height: 50px;
+      background: red;
+      border: 1px solid black;
+      float: left;
+    }
+    .test1::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
 
     </style>
   </head>
   <body>
+
+    <div  class="test1">
+      <div class="test">
+
+      </div>
+      <div class="test">
+
+      </div>
+      <div class="test">
+
+      </div>
+
+
+    </div>
+
+
     <div class="demo">
       <ul>
-        <li date-lock=0>
+        <li open="closed">
           <a href="#">快捷列表</a>
           <dl>
             <dt><a href="http://www.baidu.com" target="_blank">百度</a></dt>
@@ -69,7 +101,7 @@
             <dt><a href="http://mai.taobao.com" target="_blank">商家后台</a></dt>
           </dl>
         </li>
-        <li date-lock=0>
+        <li open="closed">
           <a href="#">列表2</a>
           <dl>
             <dt>哈哈1</dt>
@@ -79,7 +111,7 @@
             <dt>哈哈5</dt>
           </dl>
         </li>
-        <li date-lock=0>
+        <li open="closed">
           <a href="#">列表3</a>
           <dl>
             <dt>哈哈1</dt>
@@ -93,11 +125,18 @@
     </div>
 
 
+
+
       <ul style="width:76px;height:128px;padding:8px 0px;background:white;color:#33363d;border-radius:10px;position:absolute;right:36px;top:34px;text-align:center;">
         <li style="width:76px;height:37px;border:1px solid black;"><a href="#">简中</a></li>
         <li style="width:76px;height:37px;border:1px solid black;"><a href="#">繁重</a></li>
         <li style="width:76px;height:37px;border:1px solid black;"><a href="#">EN</a></li>
       </ul>
+
+      <div style="width:0px;height:0px;border:solid 10px ; border-color:transparent transparent transparent red; " class="">
+
+
+      </div>
 
 
     <script type="text/javascript">
@@ -110,12 +149,12 @@
       var e = e || window.e;
       var target = e.target || e.srcElement;
       if(target.parentNode.nodeName == "LI"){
-        if(target.parentNode.getAttribute("date-lock") == 0){
+        if(target.parentNode.getAttribute("open") == "closed"){
           target.parentNode.style.height = 120 + "px";
-          target.parentNode.setAttribute("date-lock",1);
+          target.parentNode.setAttribute("open","opened");
         }else{
           target.parentNode.style.height = 20 + "px";
-          target.parentNode.setAttribute("date-lock",0);
+          target.parentNode.setAttribute("open","closed");
         }
       }
     }
